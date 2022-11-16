@@ -9,7 +9,7 @@ function App() {
   const [bars, setBars] = useState([]);
   // const [search, setSearch] = useState('');
 
-// fetch data from an api
+
   function fetchBars() {
     fetch('https://api.openbrewerydb.org/breweries')
       .then((response) => response.json())
