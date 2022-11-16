@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+// import Header from './components/Header';
+import BarContainer from './components/BarContainer';
+// import SearchBar from './components/SearchBar';
+
 
 function App() {
+  const [bars, setBars] = useState([]);
+  // const [search, setSearch] = useState('');
+
+// fetch data from an api
+  function fetchBars() {
+    fetch('https://api.openbrewerydb.org/breweries')
+      .then((response) => response.json())
+      .then((barData) => {
+        setBars(barData);
+      })
+  }
+
+  useEffect(fetchBars, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Header />
+      <SearchBar search={search} setSearch={setSearch} /> */}
+      <BarContainer bars={bars} />
     </div>
   );
 }
