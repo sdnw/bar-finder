@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-// import Header from './components/Header';
+import Header from './components/Header';
 import BarContainer from './components/BarContainer';
-// import BarDetails from './components/BarDetails';
-// import SearchBar from './components/SearchBar';
-// import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+import BarDetails from './components/BarDetails';
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 
 
 function App() {
   const [bars, setBars] = useState([]);
-  // const [search, setSearch] = useState('');
-
 
   function fetchBars() {
     fetch('https://api.openbrewerydb.org/breweries')
@@ -24,10 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Header />
-      <SearchBar search={search} setSearch={setSearch} /> */}
+      <Header />
       <BarContainer bars={bars}/>
-      {/* <BarDetails /> */}
+      {/* <Link to="/bar/`{id}`">Bar Details</Link> */}
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import Bar from "./Bar";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import React from "react";
 
 function BarDetails({ bar }) {
   const {
@@ -14,10 +16,8 @@ function BarDetails({ bar }) {
     latitude,
   } = bar;
 
-//   q: how to render bar details on page?
-//    a: use a route to render the bar details component
   return (
-    <div className="card">
+    <div className="bar__details">
       <div class="flex">
         <div className="card__content">
           <div className="card__title">{name}</div>

@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Bar({ bar }) {
-  const { name, id} = bar;
+  const { name, id } = bar;
 
   return (
     <li className="cards__item">
