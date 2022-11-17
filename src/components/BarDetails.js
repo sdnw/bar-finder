@@ -1,10 +1,21 @@
-import Bar from "./Bar";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import React from "react";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Link,
+  useNavigate,
+} from "react-router-dom";
+import React, { useEffect } from "react";
 
 function BarDetails({ bar }) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!bar) {
+      navigate("/");
+    }
+  }, [bar, navigate]);
+
   const {
-    id,
     name,
     brewery_type,
     street,
@@ -14,11 +25,11 @@ function BarDetails({ bar }) {
     website_url,
     longitude,
     latitude,
-  } = bar;
+  } = bar || {};
 
   return (
     <div className="bar__details">
-      <div class="flex">
+      <div className="flex">
         <div className="card__content">
           <div className="card__title">{name}</div>
           <p className="card__text">{brewery_type}</p>
@@ -28,7 +39,7 @@ function BarDetails({ bar }) {
           <p className="card__text">
             {city}, {state}, {postal_code}
           </p>
-          <p className="card__text">
+          <div className="card__text">
             {website_url ? (
               <a href={website_url} target="_blank" rel="noreferrer">
                 {website_url}
@@ -45,7 +56,7 @@ function BarDetails({ bar }) {
                 Open in Google Maps
               </a>
             </p>
-          </p>
+          </div>
         </div>
       </div>
     </div>

@@ -45,6 +45,14 @@ body {
   letter-spacing: 0.1rem;
 }
 
+.slogan{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
 .centered {
   text-align: center;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Bar({ bar }) {
+function Bar({ bar, setSelectedBar }) {
   const { name, id } = bar;
 
   return (
@@ -9,7 +9,7 @@ function Bar({ bar }) {
       <div className="card">
         <div className="flex">
           <div className="card__content">
-          <Link to={`/bar/${id}`} className="card__title">{name}</Link>
+          <Link to={`/bar/${id}`} onClick={()=>setSelectedBar(bar)} className="card__title">{name}</Link>
           </div>
         </div>
       </div>

@@ -5,8 +5,9 @@ function Header() {
   return (
     <div className="header">
       <NavLink to="/" className="header__title">
-        Brewery Finder 
+        Brewery.list
       </NavLink>
+      <h1 className="slogan">Find your brewery here!</h1>
     </div>
   );
 }

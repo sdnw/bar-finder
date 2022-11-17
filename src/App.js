@@ -3,11 +3,12 @@ import './App.css';
 import Header from './components/Header';
 import BarContainer from './components/BarContainer';
 import BarDetails from './components/BarDetails';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
 
 
 function App() {
   const [bars, setBars] = useState([]);
+  const [selectedBar, setSelectedBar] = useState(null);
 
   function fetchBars() {
     fetch('https://api.openbrewerydb.org/breweries')
@@ -21,9 +22,14 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <BarContainer bars={bars}/>
-      {/* <Link to="/bar/`{id}`">Bar Details</Link> */}
+    <Header/>
+    <Routes>
+      <Route path="/" element={<BarContainer bars={bars} setSelectedBar={setSelectedBar} />} />
+      <Route path="/bar/:id" element={<BarDetails bar={selectedBar} />} />
+    </Routes>
+      {/* <Header />
+      <BarContainer bars={bars}/> */}
+      {/* <BarDetails bars={bars}/> */}
     </div>
   );
 }
