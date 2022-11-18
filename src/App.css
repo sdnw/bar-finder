@@ -45,6 +45,9 @@ body {
   letter-spacing: 0.1rem;
 }
 
+/* improve spacing between cards */
+
+
 .slogan{
   font-size: 1.5rem;
   font-weight: 400;
@@ -144,19 +147,41 @@ body {
   filter: contrast(100%);
 }
 
+.details__list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  padding: 0 1rem;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+/* how to style the links so they look more in line with the app */
+.details__list a{
+  color: #990033;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
 
 .card__title {
   color: #696969;
-  font-size: 1.25rem;
+  font-size: 1.85rem;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .card__text, .card__detail p {
   flex: 1 1 auto;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   line-height: 1.5;
+  text-transform: uppercase;
   margin-bottom: 1.25rem;
 }
 
@@ -172,6 +197,7 @@ body {
 .card__detail button{
   text-align: center;
 }
+
 
 @media(max-width: 700px){
   .cards__item{
