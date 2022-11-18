@@ -198,6 +198,13 @@ body {
   text-align: center;
 }
 
+/* q: how to add a grey hover effect to the back-button */
+.back-button:hover {
+  background-color: #990033;
+  color: white;
+  transition: 0.7s;
+}
+
 
 @media(max-width: 700px){
   .cards__item{
