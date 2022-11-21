@@ -29,9 +29,6 @@ function App() {
         />
         <Route path="/bar/:id" element={<BarDetails bar={selectedBar} />} />
       </Routes>
-      {/* <Header />
-      <BarContainer bars={bars}/> */}
-      {/* <BarDetails bars={bars}/> */}
     </div>
   );
 }
