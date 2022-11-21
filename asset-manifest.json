@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rsm-challenge/static/css/main.6a94c646.css",
+    "main.js": "/rsm-challenge/static/js/main.cd009d6c.js",
+    "index.html": "/rsm-challenge/index.html",
+    "main.6a94c646.css.map": "/rsm-challenge/static/css/main.6a94c646.css.map",
+    "main.cd009d6c.js.map": "/rsm-challenge/static/js/main.cd009d6c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a94c646.css",
+    "static/js/main.cd009d6c.js"
+  ]
+}
