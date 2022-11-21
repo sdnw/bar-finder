@@ -9,7 +9,13 @@ function Bar({ bar, setSelectedBar }) {
       <div className="card">
         <div className="flex">
           <div className="card__content">
-          <Link to={`/bar/${id}`} onClick={()=>setSelectedBar(bar)} className="card__title">{name}</Link>
+            <Link
+              to={`/bar/${id}`}
+              onClick={() => setSelectedBar(bar)}
+              className="card__title"
+            >
+              {name}
+            </Link>
           </div>
         </div>
       </div>

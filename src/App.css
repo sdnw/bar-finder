@@ -45,8 +45,6 @@ body {
   letter-spacing: 0.1rem;
 }
 
-/* improve spacing between cards */
-
 
 .slogan{
   font-size: 1.5rem;
@@ -157,7 +155,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* how to style the links so they look more in line with the app */
 .details__list a{
   color: #990033;
   text-decoration: none;
@@ -198,7 +195,6 @@ body {
   text-align: center;
 }
 
-/* q: how to add a grey hover effect to the back-button */
 .back-button:hover {
   background-color: #990033;
   color: white;
