@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import React, { useEffect } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Map from "./Map";
 
 function BarDetails({ bar }) {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ function BarDetails({ bar }) {
       <li className="details__list">
         <div className="bar__details">
           <div className="flex">
-            <div className="card__content">
+            <div className="card__content" style={{ height: '70vh', width: '70em' }}>
               <div className="card__title">{name}</div>
               <div className="card__text">Brewery Type: {brewery_type}</div>
               <div className="card__text">
@@ -58,15 +59,9 @@ function BarDetails({ bar }) {
                   "No website available"
                 )}
                 <div className="card__text">
-                  {/* <div className="map">
-                    <GoogleMapReact
-                        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
-                        defaultCenter={{ lat: {latitude}, lng: {longitude}}}
-                        defaultZoom={4}
-                        >
-                        <Bar lat={latitude} lng={longitude} text={name} />
-                        </GoogleMapReact>
-                </div> */}
+                  <div className="map">
+                    <Map zoomLevel={15} bar={bar}/>
+                </div>
                 </div>
               </div>
             </div>

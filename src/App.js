@@ -20,7 +20,7 @@ function App() {
   useEffect(fetchBars, []);
 
   return (
-    <div className="App">
+    <div className="App" style={{ height: "100vh", width: "100%" }}>
       <Header />
       <Routes>
         <Route
