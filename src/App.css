@@ -101,6 +101,17 @@ body {
   padding: 16px;
 }
 
+.card:hover .card__title {
+  color: white;
+  transition: 0.5s;
+}
+
+.card:hover {
+  background-color: #990033;
+  color: white;
+  transition: 0.5s;
+}
+
 .card {
   display: flex;
   flex-direction: column;
