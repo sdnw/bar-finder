@@ -71,7 +71,7 @@ body {
 .searchTerm {
   text-align: center;
   width: 100%;
-  border: 3px solid #990033;
+  border: 3px solid #DF8D03;
   padding: 5px;
   height: 3rem;
   border-radius: 5px;
@@ -107,7 +107,7 @@ body {
 }
 
 .card:hover {
-  background-color: #990033;
+  background-color: #DF8D03;
   color: white;
   transition: 0.5s;
 }
@@ -167,7 +167,7 @@ body {
 }
 
 .details__list a{
-  color: #990033;
+  color: #DF8D03;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 400;
@@ -207,7 +207,7 @@ body {
 }
 
 .back-button:hover {
-  background-color: #990033;
+  background-color: #DF8D03;
   color: white;
   transition: 0.7s;
 }
