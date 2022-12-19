@@ -9,4 +9,6 @@ function BarContainer({ bars, setSelectedBar }) {
   return <ul className="cards">{barList}</ul>;
 }
 
+console.log('hi') 
+
 export default BarContainer;
